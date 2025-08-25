@@ -90,12 +90,13 @@ author:
   - name: Sudarshan Shetty
   - name: Marcel Ramos
     affiliations:
-      - name: Organization X
+      - name: CUNY Graduate School of Public Health and Health Policy
         id: 9 
-        department: Department of Y
-        address: Address
-        city: City
-        postal-code: 0000000
+        orcid: 0000-0002-3242-0582
+        department: Epidemiology and Biostatistics
+        address: 55 West 125th Street
+        city: New York, NY, USA
+        postal-code: 10027
   - name: Domenick J. Braccia
     affiliations:
       - name: Organization XA
@@ -185,18 +186,17 @@ by the research community [@Barker2022 ; @Pearson2025] and open
 software ecosystems have become central innovation hubs, driving
 technological and cultural transformation [@Hocquet2024]. The
 Bioconductor project has been established as a major distribution
-channel for open data science methods in the life sciences. Nowadays,
+channel for open data science methods in the life sciences. Currently,
 its vast developer community maintains over 2,300 quality-controlled R
 packages for various fields of life science informatics [@gentleman2004].
-Additionally, Bioconductor has evolved into a global community that supports
-data science collaboration and training [@drnevich2025] in general, and now the
-international calls for enhancing microbiology education in particular
-[@Timmis2024].
+Bioconductor has evolved into a global community that supports data science
+collaboration and training [@drnevich2025]; particularly, supporting efforts to
+enhance microbiology education [@Timmis2024].
 
 Microbiome research focuses on the study of microbial communities and
 their diversity, function, and interactions with the host and
 environment [@moreno-indias2021]. The technologies used in
-this field generate vast amounts of high-dimensional, hierarchically structured 
+this field generate vast amounts of high-dimensional and hierarchically structured
 data. The expansion of microbiome research has led to the accumulation of
 interlinked, multi-modal datasets encompassing versatile taxonomic and
 functional assays. Microbiome data scientists are thus increasingly facing
@@ -205,14 +205,14 @@ implementing reproducible workflows, which presents many practical challenges.
 First, the unique statistical properties and complexity of microbiome data
 necessitate specialized approaches [@moreno-indias2021; @Jeganathan2021;
 @Willis2019]. Secondly, the diversity of proposed solutions can make it 
-difficult to identify the optimal methods and build interoperable workflows 
+difficult to identify the optimal methods and to build interoperable workflows
 [@Wen2023 ; @Shetty2019]. Thus, the need for standardized microbiome data 
 science infrastructures  has been widely recognized [@moreno-indias2021]
 and a variety of open microbiome data science 
 frameworks have been developed, including Anvi'o [@Eren2021], 
 Mothur [@schloss2009], QIIME2 [@bolyen2019], and phyloseq [@mcmurdie2012].
 However, platforms that exclusively focus on microbiome data science may not be
-able to optimally address the need to link data across different multiple
+able to optimally address the need to link data across multiple
 modalities originating from different research domains. 
 
 The Bioconductor project embeds the methods of microbiome data science 
@@ -404,10 +404,10 @@ user communities.
 ![**Benchmarking mia/TreeSE against phyloseq and speedyseq.** TreeSE, phyloseq and speedyseq were benchmarked for five common analytical operations applied to random subsets of samples from the GrieneisenTSData experiment [@Grieneisen2021]. Overall, the TreeSE approach outperforms phyloseq. While speedyseq is faster in certain operations, TreeSE scales more efficiently in both execution time (t) and allocated memory (m) as sample size (n) increases.](figures/benchmarking.png){#fig-benchmarking}
 
 **Multi-assay data structures.** When integrating data across multiple 
-modalities, such as taxonomy, metabolomics, or host genomics, more flexible
-sample mapping may become necessary. Multi-omics data is often sparse, and 
-samples can be only partially matched between experiments. In other cases, 
-a single sample in one modality can be matched by two or more samples in 
+modalities, such as taxonomy, metabolomics, or host genomics, flexible
+sample mapping is necessary. Multi-omics data is often sparse, and
+samples may only be partially matched between experiments. In some cases,
+a single sample in one modality may be matched by two or more samples in
 another modality [see e.g. @Husso2023]. The MultiAssayExperiment (MAE) data 
 container [@ramos2017] facilitates the integration of multiple data 
 objects representing different omics modalities (see @fig-datacontainers).
